@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Module 10.6 task 3</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="header__menu">
+            <div class="menu__logo">
+                <a href="#" class="menu__logo_img">
+                    <svg class="logo-image" width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Логотип - буква А с плавными кривыми -->
+                        <path d="M80 220
+                           Q100 50 150 50
+                           Q200 50 220 220
+                           M100 150
+                           Q150 130 200 150"
+                              stroke="#fff"
+                              stroke-width="9"
+                              fill="none"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="navbar">
+                <ul class="navbar__list">
+                    <li class="navbar-item">
+                        <a class="navbar-link" href="#">Главная</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a class="navbar-link" href="#">Не главная</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a class="navbar-link" href="#">Третья</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a class="navbar-link" href="#">Четвертая</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="container__exercise">
+            <h3>Задание 3.</h3>
+            <p>
+                1. Реализовать чат на основе эхо-сервера <em>wss://echo-ws-service.herokuapp.com</em>.<br>
+                Интерфейс состоит из input, куда вводится текст сообщения, и кнопки «Отправить».<br>
+                При клике на кнопку «Отправить» сообщение должно появляться в окне переписки.<br>
+                Эхо-сервер будет отвечать вам тем же сообщением, его также необходимо выводить в чат:
+            </p>
+            <img src="img/module_10_6_3_img1.png" alt="Чат">
+            <p>
+                2. Добавить в чат механизм отправки гео-локации:
+            </p>
+            <img src="img/module_10_6_3_img2.png" alt="Чат с геолокацией">
+            <p>
+                При клике на кнопку «Гео-локация» необходимо отправить данные серверу и в чат вывести ссылку <br>
+                на https://www.openstreetmap.org/ с вашей гео-локацией. <strong>Сообщение, которое отправит обратно эхо-сервер, не выводить.</strong>
+            </p>
+        </div>
+    </div>
+
+    <div class="container__chat-button" id="chat-button">
+        <img class="container__chat-icon" src="img/chat_icon.png" alt="Чат">
+    </div>
+    <div class="container__chat" id="chat-box">
+        <span class="chat__close-button">&#10006;</span>
+        <div class="chat__input-container">
+            <input type="text" class="chat-input" id="chat-input" placeholder="Здесь вводится текст сообщения">
+            <button class="chat-button send-button">Отправить</button>
+            <button class="chat-button geo-button">Геолокация</button>
+        </div>
+        <div class="chat__content"></div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
